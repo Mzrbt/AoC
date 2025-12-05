@@ -25,6 +25,8 @@ for ligne in lignes:
             if dial == 0:
                 c += 1
         elif len(ligne) == 4:
+            print(int(str(ligne[1])+str(ligne[2])+str(ligne[3])) - dial)
+            print("bladjefjiejgrejgrjig")
             if (int(str(ligne[1])+str(ligne[2])+str(ligne[3])) - dial) >= 100:
                 nvD = int(str(ligne[1])+str(ligne[2])+str(ligne[3])) - dial
                 print(f"nvd = {nvD}")
