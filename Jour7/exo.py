@@ -4,6 +4,7 @@ with open("Jour7/input.txt") as f:
 input_list = [list(line) for line in input]
 
 compteur = 0
+
 for i in range(len(input_list)):
     for j in range(len(input_list[i])):
         if input_list[i][j] == 'S':
@@ -11,8 +12,12 @@ for i in range(len(input_list)):
         elif input_list[i][j] == '^' and input_list[i-1][j] == '|':
             input_list[i][j-1] = "|"
             input_list[i][j+1] = "|"
-            compteur += 1
         elif input_list[i][j] == '.' and input_list[i-1][j] == '|':
             input_list[i][j] = "|"
+
+for i in range(len(input_list)-2):
+    for j in range(len(input_list[i])):
+        if input_list[i][j] == '^' and input_list[i-1][j] == '|':
+            compteur += 2
 
 print(compteur)
