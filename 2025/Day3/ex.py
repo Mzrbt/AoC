@@ -1,4 +1,4 @@
-with open("Jour3/input.txt") as f:
+with open("input.txt") as f:
     input = f.readlines()
 
 res=0
